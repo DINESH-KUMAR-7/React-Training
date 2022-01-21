@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import A2 from './A2';//q3 - answer
+import './App.css';
+import B from './B';//q2 - answer
+import HelloWorld from './HelloWorld';//q1 - answer
+import M2 from './M2';
+
+//app component
+export default function App() {
+  function X(){
+    return "Hello"
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Question 1</h1>
+      <HelloWorld/>
+      <hr></hr>
+      
+      <h1>Question 2</h1>
+      <B/>
+      <hr></hr>
+
+      <h1>Question 3</h1>
+      <A2/>
+      <hr></hr>
+
+      <h1>Question 4</h1>
+      <M2/>
+      <hr></hr>
+
+      <h1>Question 5</h1>
+      <div className="App">
+        <h1>{X()}</h1>
+      </div>
+    </>
   );
 }
-
-export default App;
+// if i removed X rounded brackets it won't print "Hello"
+//export default App;
